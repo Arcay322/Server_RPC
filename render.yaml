@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: Factorial gRPC Server
+    env: python
+    region: oregon
+    plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "./start.sh"
+    envVars:
+      - key: PORT
+        value: 50051
